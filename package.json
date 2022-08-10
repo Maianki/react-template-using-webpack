@@ -1,0 +1,11 @@
+{
+  "name": "react-template-webpack",
+  "version": "1.0.0",
+  "description": "This is a react template created by Ankit Kumain using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ankit Kumain",
+  "license": "ISC"
+}
