@@ -29,11 +29,23 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "..", "./build"),
-    filename: "bundle.js",
+    filename: "[name].[contenthash].bundle.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "..", "./src/index.html"),
     }),
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        node_vendors: {
+          name: "vendor",
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+          priority: 1,
+        },
+      },
+    },
+  },
 };
